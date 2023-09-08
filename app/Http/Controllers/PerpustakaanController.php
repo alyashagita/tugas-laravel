@@ -31,7 +31,7 @@ class perpustakaanController extends Controller
     public function create()
     {
         //
-    }
+    } 
 
     /**
      * Store a newly created resource in storage.

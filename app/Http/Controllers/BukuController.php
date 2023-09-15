@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BukuController extends Controller
 {
@@ -11,11 +12,8 @@ class BukuController extends Controller
      */
     public function index()
     {
-        //
-    }
-    public function buku()
-    {
-        return view('perpustakaan.buku');
+        $buku = DB::table('buku')->get();
+        return view('buku.index', compact('buku'));
     }
 
     /**
@@ -23,7 +21,7 @@ class BukuController extends Controller
      */
     public function create()
     {
-        //
+        return view('buku.create');
     }
 
     /**
@@ -31,7 +29,27 @@ class BukuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'id' => 'required',
+            'kode' => 'required',
+            'judul' => 'required',
+            'penulis' => 'required',
+            'penerbit' => 'required',
+            'tahun_terbit' => 'required',
+            'stok' => 'required',
+        ]);
+
+        $query = DB::table('buku')->insert([
+            'id' => $request['id'],
+            'kode' => $request['kode'],
+            'judul' => $request['judul'],
+            'penulis' => $request['penulis'],
+            'penerbit' => $request['penerbit'],
+            'tahun_terbit' => $request['tahun_terbit'],
+            'stok' => $request['stok'],
+        ]);
+
+        return redirect('/buku');
     }
 
     /**

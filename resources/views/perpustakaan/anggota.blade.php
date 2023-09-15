@@ -94,4 +94,4 @@
                                 <!-- /.content -->
                             </form>
                         </div>
-@endsection('')
+@endsection

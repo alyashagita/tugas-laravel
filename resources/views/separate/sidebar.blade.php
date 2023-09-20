@@ -39,7 +39,7 @@
                   <a href="/anggota/create" class="nav-link">
                       <i class="nav-icon fas fa-th"></i>
                       <p>
-                          Data Anggota
+                          Form Anggota
                       </p>
                   </a>
               </li>
@@ -47,7 +47,7 @@
                   <a href="/buku/create" class="nav-link">
                       <i class="nav-icon fas fa-th"></i>
                       <p>
-                          Data Buku
+                          Form Buku
                       </p>
                   </a>
               </li>
@@ -55,7 +55,7 @@
                   <a href="/petugas/create" class="nav-link">
                       <i class="nav-icon fas fa-th"></i>
                       <p>
-                          Data Petugas
+                          Form Petugas
                       </p>
                   </a>
               </li>

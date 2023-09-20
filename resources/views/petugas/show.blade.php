@@ -12,7 +12,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Petugas/li>
+                        <li class="breadcrumb-item active">Petugas</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -27,35 +27,33 @@
                 <div class="col-lg-12">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Form Petugas</h3>
+                            <h3 class="card-title">Data Petugas</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="{{ route('petugas.store')}}" method="post">
-                            @csrf
+                        
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="id">ID Petugas</label>
-                                    <input class="form-control" type="text" name="id" id="id" placeholder="Masukan ID">
+                                    <input class="form-control" type="text" name="id" id="id" placeholder="Masukan ID" disabled value="{{ $petugas[0]->id }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="nama_petugas">Nama Petugas</label>
-                                    <input class="form-control" type="text" name="nama_petugas" id="nama_petugas" placeholder="Masukan Nama">
+                                    <input class="form-control" type="text" name="nama_petugas" id="nama_petugas" placeholder="Masukan Nama" disabled value="{{ $petugas[0]->nama_petugas }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="jabatan_petugas">Jabatan</label>
-                                    <input class="form-control" type="text" name="jabatan_petugas" id="judul" placeholder="jabatan_petugas">
+                                    <input class="form-control" type="text" name="jabatan_petugas" id="judul" placeholder="jabatan_petugas" disabled value="{{ $petugas[0]->jabatan_petugas }}">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="tlp_petugas" name="tlp_petugas" id="tlp_petugas">telepon petugas</label>
-                                    <input class="form-control" type="text" name="tlp_petugas" id="tlp_petugas" placeholder="telepon petugas">
+                                    <input class="form-control" type="text" name="tlp_petugas" id="tlp_petugas" placeholder="telepon petugas" disabled value="{{ $petugas[0]->tlp_petugas }}">
                                 </div>
 
                                 <div class="form-group">
                                     <label>Alamat</label>
-                                    <textarea class="form-control" rows="3" name="alamat_petugas" placeholder="Masukan alamat"></textarea>
-                                </div>
+                                    <textarea class="form-control" rows="3" name="alamat_petugas" placeholder="Masukan alamat" disabled>{{ $petugas[0]->alamat_petugas }}</textarea>
 
                             </div>
 

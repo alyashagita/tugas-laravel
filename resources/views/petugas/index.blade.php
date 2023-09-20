@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Data petugas')
+@section('title', 'Data Petugas')
 
 
 @section('content')
@@ -37,7 +37,7 @@
                 <div class="col-lg-12">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Table Data petugas</h3>
+                            <h3 class="card-title">Table Data Petugas</h3>
                         </div>
                         <!-- /.card-header -->
                         <table class="table table-head-fixed text-nowrap">
@@ -62,11 +62,14 @@
                                     <td>{{ $value->jabatan_petugas }}</td>
                                     <td>{{ $value->tlp_petugas }}</td>
                                     <td>{{ $value->alamat_petugas }}</td>
-
                                     <td>
-                                        <a href="" class="btn-sm btn-info">Show</a>
-                                        <a href="" class="btn-sm btn-warning">Edit</a>
-                                        <a href="" class="btn-sm btn-danger">Delete</a>
+                                        <form action="{{ route('petugas.destroy', $value->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                        <a href="{{ route('petugas.show', $value->id) }}" class="btn-sm btn-info">Show</a>
+                                        <a href="{{ route('petugas.edit', $value->id) }}" class="btn-sm btn-warning">Edit</a>
+                                        <button class="btn-sm btn-danger">Delete</button>
+                                        </form>
                                     </td>
                                 </tr>
 

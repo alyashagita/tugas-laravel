@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Data anggota')
+@section('title', 'Data Anggota')
 
 
 @section('content')
@@ -37,7 +37,7 @@
                 <div class="col-lg-12">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Table Data anggota</h3>
+                            <h3 class="card-title">Table Data Anggota</h3>
                         </div>
                         <!-- /.card-header -->
                         <table class="table table-head-fixed text-nowrap">
@@ -66,9 +66,13 @@
                                     <td>{{ $value->tlp }}</td>
                                     <td>{{ $value->alamat }}</td>
                                     <td>
-                                        <a href="" class="btn-sm btn-info">Show</a>
-                                        <a href="" class="btn-sm btn-warning">Edit</a>
-                                        <a href="" class="btn-sm btn-danger">Delete</a>
+                                        <form action="{{ route('anggota.destroy', $value->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                        <a href="{{ route('anggota.show', $value->id) }}" class="btn-sm btn-info">Show</a>
+                                        <a href="{{ route('anggota.edit', $value->id) }}" class="btn-sm btn-warning">Edit</a>
+                                        <button class="btn-sm btn-danger">Delete</button>
+                                        </form>
                                     </td>
                                 </tr>
 

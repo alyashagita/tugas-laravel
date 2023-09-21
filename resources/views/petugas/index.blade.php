@@ -49,7 +49,7 @@
                                     <th>Jabatan</th>
                                     <th>Telepon petugas</th>
                                     <th>Alamat petugas</th>
-                                    <th>Actiom</th>
+                                    <th>Action</th>
 
                                 </tr>
                             </thead>

@@ -12,7 +12,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Petugas/li>
+                        <li class="breadcrumb-item active">Petugas</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -31,6 +31,8 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
+                        
+                        <div class="card-body">
                         <form action="{{ route('petugas.update', $petugas[0]->id) }}" method="POST">
                             @csrf
                             @method('PUT')
@@ -70,19 +72,10 @@
                                 <div class="alert alert-danger mt-1">{{ $message }}</div>
                                 @enderror
                             </div>
-
-
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-warning">Submit</button>
                             </div>
+                            <!-- /.content -->
                         </form>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.content -->
-</div>
-@endsection
-
-</html>
+                    @endsection

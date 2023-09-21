@@ -51,7 +51,7 @@
                                     <th>penerbit</th>
                                     <th>tahun terbit</th>
                                     <th>stok</th>
-                                    <th>Actiom</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>

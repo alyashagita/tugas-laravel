@@ -51,7 +51,7 @@
                                     <th>jurusan</th>
                                     <th>telepon</th>
                                     <th>alamat</th>
-                                    <th>Actiom</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
